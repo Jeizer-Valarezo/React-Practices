@@ -1,11 +1,9 @@
-import { HelloWorld } from "./HelloWorld";
-import { createRoot } from "react-dom/client";
-const HelloWorldElement = (
-    <div>
-    <HelloWorld/>
-    </div>
-)
+import { HelloWorld } from './HelloWorld'
+import { createRoot } from 'react-dom/client'
 
-const root = createRoot(getElementById('root'))
-createRoot(root)
-root.render(HelloWorldElement)
+const helloWorldElement = <HelloWorld/>
+
+const rootElement = document.getElementById('root')
+const root = createRoot(rootElement)
+
+root.render(helloWorldElement)

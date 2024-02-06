@@ -1,5 +1,10 @@
-export function HelloWorld (){
+import { Message } from "./Message";
+
+export function HelloWorld () {
   return (
-    <h2>HelloWorld</h2>
+    <div>
+      <h2>HelloWorld</h2>
+      <Message/>
+    </div>
   )
 }
