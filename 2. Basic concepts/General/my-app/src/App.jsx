@@ -1,6 +1,7 @@
 import { AlertClock } from "./AlertClock";
 import { Clock } from "./Clock";
 import { Counter } from "./Counter";
+import { MouseClicker } from "./MouseClicker";
 import { Welcome } from "./Welcome";
 
 export function App() {
@@ -13,6 +14,7 @@ export function App() {
       <AlertClock onButtonClick={handleCurrentTime} />
       <Counter initialCounter={0} incrementAmount={1} decrementAmount={3} resetAmount={10}/>
       <Clock/>
+      <MouseClicker/>
     </div>
   );
 }
