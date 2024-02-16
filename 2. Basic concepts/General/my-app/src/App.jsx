@@ -5,6 +5,7 @@ import { InteractiveWelcome } from "./InteractiveWelcome";
 import { MouseClicker } from "./MouseClicker";
 import { Welcome } from "./Welcome";
 import { Login } from "./Login";
+import { UncontrolledLogin } from "./UncontrolledLogin";
 
 export function App() {
   const handleCurrentTime = (currentTime) => {
@@ -17,7 +18,7 @@ export function App() {
     <div>
       <InteractiveWelcome/>
       <AlertClock onButtonClick={handleCurrentTime} />
-      <Login onLogin={onLogin}/>
+      <UncontrolledLogin onLogin={onLogin}/>
     </div>
   );
 }
