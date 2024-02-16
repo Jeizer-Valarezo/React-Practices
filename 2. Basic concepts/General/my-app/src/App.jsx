@@ -6,6 +6,8 @@ import { MouseClicker } from "./MouseClicker";
 import { Welcome } from "./Welcome";
 import { Login } from "./Login";
 import { UncontrolledLogin } from "./UncontrolledLogin";
+import {FocusableInput} from "./FocusableInput";
+import {MessageOnMount} from "./MessageOnMount";
 
 export function App() {
   const handleCurrentTime = (currentTime) => {
@@ -17,8 +19,10 @@ export function App() {
   return (
     <div>
       <InteractiveWelcome/>
-      <AlertClock onButtonClick={handleCurrentTime} />
       <UncontrolledLogin onLogin={onLogin}/>
+      <FocusableInput/>
+      <MessageOnMount/>
+      <Counter initialCounter={0} incrementAmount={1} decrementAmount={1} resetAmount={0}/>
     </div>
   );
 }
