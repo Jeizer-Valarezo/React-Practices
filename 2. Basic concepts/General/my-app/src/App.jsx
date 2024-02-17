@@ -9,6 +9,7 @@ import { UncontrolledLogin } from "./UncontrolledLogin";
 import {FocusableInput} from "./FocusableInput";
 import {MessageOnMount} from "./MessageOnMount";
 import { Colors } from "./Colors";
+import { TodoList } from "./TodoList";
 
 export function App() {
   const handleCurrentTime = (currentTime) => {
@@ -30,6 +31,7 @@ export function App() {
       <MessageOnMount/>
       <Counter initialCounter={0} incrementAmount={1} decrementAmount={1} resetAmount={0}/>
       <Colors colorList={colorsArray}/>
+      <TodoList/>
     </div>
   );
 }
