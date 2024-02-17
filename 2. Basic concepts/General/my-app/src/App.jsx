@@ -8,6 +8,7 @@ import { Login } from "./Login";
 import { UncontrolledLogin } from "./UncontrolledLogin";
 import {FocusableInput} from "./FocusableInput";
 import {MessageOnMount} from "./MessageOnMount";
+import { Colors } from "./Colors";
 
 export function App() {
   const handleCurrentTime = (currentTime) => {
@@ -16,6 +17,11 @@ export function App() {
   const onLogin = (loginData) => {
     console.log("Login data:", loginData);
   };
+  const colorsArray = [
+      { id: 1, name: "Red" },
+      { id: 2, name: "Green" },
+      { id: 3, name: "Blue" },
+    ]
   return (
     <div>
       <InteractiveWelcome/>
@@ -23,6 +29,7 @@ export function App() {
       <FocusableInput/>
       <MessageOnMount/>
       <Counter initialCounter={0} incrementAmount={1} decrementAmount={1} resetAmount={0}/>
+      <Colors colorList={colorsArray}/>
     </div>
   );
 }
