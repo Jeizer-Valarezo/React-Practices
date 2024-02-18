@@ -7,5 +7,10 @@ export function FocusableInput() {
     inputRef.current.focus();
   }, []);
 
-  return <input ref={inputRef} type="text" placeholder="Type something..." />;
+  return (
+    <div>
+      <h1>Focusable Input</h1>
+      <input ref={inputRef} type="text" placeholder="Type something..." />
+    </div>
+  );
 }

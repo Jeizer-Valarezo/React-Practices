@@ -18,6 +18,7 @@ export function UncontrolledLogin({ onLogin }) {
 
   return (
     <form onSubmit={handleLogin} onReset={handleReset}>
+      <h1>Uncontrolled Login</h1>
       <div>
         <input
           name="username"

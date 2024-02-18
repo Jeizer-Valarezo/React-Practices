@@ -18,6 +18,6 @@ export function MessageOnMount () {
     };
   }, []); 
 
-  return <div>Component Content</div>;
+  return <div>Message on mount</div>;
 };
 

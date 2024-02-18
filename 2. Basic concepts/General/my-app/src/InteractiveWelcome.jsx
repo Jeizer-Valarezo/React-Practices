@@ -10,8 +10,9 @@ export function InteractiveWelcome() {
     }
   return (
     <div>
+      <h1>Interactive Welcome</h1>
       <input onChange={handleInputChange} placeholder="Introduce tu nombre"/>
-      <Welcome name={userName} age={30} />
+      <Welcome name={userName} />
     </div>
   );
 }
