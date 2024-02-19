@@ -32,6 +32,7 @@ export function App() {
       <Counter initialCounter={0} incrementAmount={1} decrementAmount={1} resetAmount={0}/>
       <Colors colorList={colorsArray}/>
       <TodoList/>
+      <Clock/>
     </div>
   );
 }
