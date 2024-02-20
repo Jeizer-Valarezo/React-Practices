@@ -5,6 +5,7 @@ import { LanguageContext } from "./Components/LanguageContext";
 import { Clock } from "./Components/Clock";
 import { GithubUser } from "./Components/GithubUser";
 import { GithubUsers } from "./Components/GithubUsers";
+import { Counter } from "./Components/Counter";
 
 export function App() {
   const [language, setLanguage] = useState('en');
@@ -28,6 +29,7 @@ export function App() {
         <Clock />
         <GithubUser username="Jeizer-Valarezo"/>
         <GithubUsers/>
+        <Counter initialCounter={0} incrementAmount={1} decrementAmount={1} resetAmount={0}/>
       </Container>
     </LanguageContext.Provider>
   );
