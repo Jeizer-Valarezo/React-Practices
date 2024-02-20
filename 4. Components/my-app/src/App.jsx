@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import { Container } from "./Container";
-import { InteractiveWelcome } from "./InteractiveWelcome";
-import { LanguageContext } from "./LanguageContext";
-import { Clock } from "./Clock";
+import { Container } from "./Components/Container";
+import { InteractiveWelcome } from "./Components/InteractiveWelcome";
+import { LanguageContext } from "./Components/LanguageContext";
+import { Clock } from "./Components/Clock";
+import { GithubUser } from "./Components/GithubUser";
+import { GithubUsers } from "./Components/GithubUsers";
 
 export function App() {
   const [language, setLanguage] = useState('en');
@@ -24,6 +26,8 @@ export function App() {
           </select>
         </div>
         <Clock />
+        <GithubUser username="Jeizer-Valarezo"/>
+        <GithubUsers/>
       </Container>
     </LanguageContext.Provider>
   );

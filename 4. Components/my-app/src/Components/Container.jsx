@@ -1,5 +1,5 @@
 import { useState } from "react"
-import classes from "./Container.module.scss"
+import classes from "../Styles/Container.module.scss"
 
 export function Container({title, children}) {
   const [collapsed, setCollapsed] = useState(false)
