@@ -32,8 +32,8 @@ export function App() {
           </select>
         </div>
         <Clock />
-        <GithubUser username="Jeizer-Valarezo"/>
-        <GithubUsers/>
+        <GithubUser />
+        
         <Counter initialCounter={0} incrementAmount={1} decrementAmount={1} resetAmount={0}/>
         <Form onLogin={onLogin}/>
       </Container>
