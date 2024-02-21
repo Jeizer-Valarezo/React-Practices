@@ -7,6 +7,7 @@ import { GithubUser } from "./Components/GithubUser";
 import { GithubUsers } from "./Components/GithubUsers";
 import { Counter } from "./Components/Counter";
 import { Form } from "./Components/Form";
+import { CurrentLocation } from "./Components/CurrentLocation";
 
 export function App() {
   const [language, setLanguage] = useState('en');
@@ -36,6 +37,7 @@ export function App() {
         
         <Counter initialCounter={0} incrementAmount={1} decrementAmount={1} resetAmount={0}/>
         <Form onLogin={onLogin}/>
+        <CurrentLocation/>
       </Container>
     </LanguageContext.Provider>
   );
