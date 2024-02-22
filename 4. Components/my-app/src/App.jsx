@@ -5,6 +5,7 @@ import { Counter } from "./Components/Counter";
 import { Container } from "./Components/Container";
 import { ShowGithubUser } from "./Components/ShowGithubUser";
 import { NotFound } from "./Components/NotFound";
+import { GithubUserList } from "./Components/GithubUserList";
 
 export function App() {
   
@@ -17,7 +18,9 @@ export function App() {
       <Routes>
         <Route path="/" element={<Welcome name="ur sister bf" />}/>
         <Route path="counter" element={<Counter initialCounter={0} incrementAmount={1} decrementAmount={1} resetAmount={0} />}/>
-        <Route path="users/:username" element={<ShowGithubUser />} />
+        <Route path="users" element={<GithubUserList />}>
+          <Route path=":username" element={<ShowGithubUser />} />
+        </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
 
