@@ -1,5 +1,7 @@
-import { useEffect, useState } from "react";
-import { Link, Outlet } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, Outlet, Route, Routes } from "react-router-dom";
+import { AddUserMessage } from "./AddUserMessage";
+import { ShowGithubUser } from "./ShowGithubUser";
 
 export function GithubUserList() {
   const [users, setUsers] = useState([]);
@@ -13,8 +15,12 @@ export function GithubUserList() {
 
   return (
     <div>
-      <Outlet />
+      
       <h2>Github User List</h2>
+      <Routes>
+        <Route index element={<AddUserMessage />} />
+        <Route path=":username" element={<ShowGithubUser />} />
+      </Routes>
       <ul>
         {users.map((user) => (
           <li key={user.login}>
