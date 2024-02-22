@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { useGithubUser } from "./useGithubUser";
 import "../Styles/GithubUser.scss";
+import { useParams } from "react-router-dom";
 
 export function GithubUser() {
-  const [username, setUsername] = useState();
+  const { username } = useParams()
   const { data, loading, error, fetchUser } = useGithubUser();
 
   const handleFetchUser = () => {
@@ -15,12 +16,7 @@ export function GithubUser() {
   return (
     <div>
       <h1>GithubUser</h1>
-      <input
-        type="text"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-        placeholder="Enter GitHub username"
-      />
+      
       <button onClick={handleFetchUser}>Fetch User</button>
 
       {loading && <p>Loading...</p>}
