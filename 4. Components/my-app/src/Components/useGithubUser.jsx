@@ -11,7 +11,7 @@ export function useGithubUser() {
       const response = await fetch(`https://api.github.com/users/${username}`);
 
       if (!response.ok) {
-        throw new Error(`Failed to fetch data for user ${username}`);
+        throw new Error(`Failed to fetch data for user ${username}, please enter a GithubUsername in the path`);
       }
 
       const json = await response.json();
